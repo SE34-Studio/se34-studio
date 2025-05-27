@@ -5,10 +5,10 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'SE34 Studio',
+  tagline: '欢迎来到SE34 Studio的文档站点',
   favicon: 'img/favicon.ico',
-
+  plugins: ["./src/plugins/tailwind-config.js"],
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -58,7 +58,7 @@ const config: Config = {
           onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: ['./src/css/custom.css','./src/css/tailwind.css','./src/css/shadcn.css',],
         },
       } satisfies Preset.Options,
     ],
@@ -68,7 +68,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'SE34 Studio',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
