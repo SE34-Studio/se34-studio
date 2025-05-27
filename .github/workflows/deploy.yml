@@ -19,7 +19,8 @@ jobs:
         with:
           node-version: 18
           cache: pnpm
-
+      - name: Set up pnpm
+        run: npm install -g pnpm
       - name: Install dependencies
         run: pnpm install
       - name: Build website
