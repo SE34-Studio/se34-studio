@@ -5,7 +5,7 @@ on:
     branches:
       - main
     # Review gh actions docs if you want to further define triggers, paths, etc
-    # https://githubdocs.cn/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
 jobs:
   test-deploy:
@@ -17,9 +17,12 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20 # 使用最新的Node.js版本
           cache: pnpm
 
+      - name: Install dependencies
+        run: pnpm add --global pnpm@latest # 安装最新版本的pnpm
+        shell: bash
       - name: Install dependencies
         run: pnpm install
       - name: Test build website
