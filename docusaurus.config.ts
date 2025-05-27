@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'SE34 Studio',
-  tagline: '欢迎来到SE34 Studio的文档站点',
+  title: 'ByteLoom Studio',
+  tagline: '欢迎来到ByteLoom Studio的文档站点',
   favicon: 'img/favicon.ico',
   plugins: ["./src/plugins/tailwind-config.js"],
   // Set the production url of your site here
@@ -63,7 +63,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'SE34 Studio',
+      title: 'ByteLoom Studio',
       items: [
         {
           type: 'docSidebar',
